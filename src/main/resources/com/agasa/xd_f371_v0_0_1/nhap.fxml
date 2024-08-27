@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="618.0" prefWidth="711.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.agasa.xd_f371_v0_0_1.controller.CreateFormController">
+   <children>
+      <AnchorPane layoutX="7.0" layoutY="34.0" prefHeight="378.0" prefWidth="693.0">
+         <children>
+            <Separator layoutX="349.0" layoutY="-14.0" orientation="VERTICAL" prefHeight="388.0" prefWidth="7.0" />
+            <Label layoutX="14.0" layoutY="97.0" prefHeight="25.0" prefWidth="83.0" text="Đơn vị nhập :">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField id="dvnTf" fx:id="dvnTf" layoutX="136.0" layoutY="97.0" prefHeight="25.0" prefWidth="207.0" />
+            <Label layoutX="14.0" layoutY="129.0" prefHeight="25.0" prefWidth="46.0" text="Số :">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField id="soTf" fx:id="soTf" layoutX="136.0" layoutY="129.0" prefHeight="25.0" prefWidth="75.0" />
+            <Label layoutX="14.0" layoutY="61.0" prefHeight="25.0" prefWidth="116.0" text="Đơn vị vận chuyển :">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField id="dvvcTf" fx:id="dvvcTf" layoutX="136.0" layoutY="61.0" prefHeight="25.0" prefWidth="207.0" />
+            <Label layoutX="357.0" layoutY="66.0" prefHeight="25.0" prefWidth="110.0" text="Ngày :">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label id="dateIf" fx:id="dateIf" layoutX="483.0" layoutY="66.0" prefHeight="25.0" prefWidth="75.0" text="12/8/2024">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="16.0" layoutY="165.0" prefHeight="25.0" prefWidth="116.0" text="Người nhận hàng :">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField id="recvTf" fx:id="recvTf" layoutX="136.0" layoutY="166.0" prefHeight="25.0" prefWidth="207.0" />
+            <Label layoutX="356.0" layoutY="124.0" prefHeight="25.0" prefWidth="91.0" text="Tên xăng dầu :">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="356.0" layoutY="155.0" prefHeight="25.0" prefWidth="91.0" text="Đơn giá :">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField id="donGiaTf" fx:id="donGiaTf" layoutX="457.0" layoutY="156.0" prefHeight="25.0" prefWidth="116.0" />
+            <Label layoutX="356.0" layoutY="192.0" prefHeight="25.0" prefWidth="91.0" text="Phái xuất :">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField id="soLuongTf" fx:id="phaiXuatTf" layoutX="457.0" layoutY="192.0" prefHeight="25.0" prefWidth="67.0" />
+            <Separator prefWidth="200.0" />
+            <Separator prefWidth="200.0" />
+            <Label layoutX="16.0" layoutY="25.0" prefHeight="25.0" prefWidth="200.0" text="Vận chuyển" />
+            <Label layoutX="356.0" layoutY="25.0" prefHeight="25.0" prefWidth="200.0" text="Thông tin đơn hàng" />
+            <Label layoutX="607.0" layoutY="150.0" prefHeight="25.0" prefWidth="60.0" text="(VND / lit)">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="528.0" layoutY="192.0" prefHeight="25.0" prefWidth="60.0" text="lit t độ C">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+            <Separator layoutX="16.0" layoutY="49.0" prefWidth="200.0" />
+            <Separator layoutX="356.0" layoutY="51.0" prefWidth="200.0" />
+            <Button id="delbtn" fx:id="delbtn" layoutX="631.0" layoutY="339.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="46.0" text="Xóa" />
+            <Button id="addbtn" fx:id="addbtn" layoutX="573.0" layoutY="339.0" mnemonicParsing="false" onAction="#btnInsert" text="Thêm" />
+            <TextField id="tenXDTf" fx:id="tenXDTf" layoutX="456.0" layoutY="124.0" prefHeight="25.0" prefWidth="200.0" />
+            <Label layoutX="16.0" layoutY="199.0" prefHeight="25.0" prefWidth="116.0" text="Tính chất nhập:">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField id="recvTf" fx:id="tcNhap" layoutX="136.0" layoutY="200.0" prefHeight="25.0" prefWidth="207.0" />
+            <Label layoutX="357.0" layoutY="90.0" prefHeight="25.0" prefWidth="110.0" text="Giá trị đến ngày :">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label id="dateIf" fx:id="expiredDate" layoutX="481.0" layoutY="90.0" prefHeight="25.0" prefWidth="75.0" text="12/8/2024">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="16.0" layoutY="234.0" prefHeight="25.0" prefWidth="116.0" text="Theo lệnh (KH) số :">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField id="recvTf" fx:id="lenhKHso" layoutX="136.0" layoutY="235.0" prefHeight="25.0" prefWidth="207.0" />
+            <Label layoutX="357.0" layoutY="223.0" prefHeight="25.0" prefWidth="91.0" text="Thực xuất :">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField id="soLuongTf" fx:id="thucXuatTf" layoutX="458.0" layoutY="223.0" prefHeight="25.0" prefWidth="67.0" />
+            <Label layoutX="529.0" layoutY="223.0" prefHeight="25.0" prefWidth="60.0" text="lit 15 độ C">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="357.0" layoutY="259.0" prefHeight="25.0" prefWidth="104.0" text="Nhiệt độ thực tế:">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField id="soLuongTf" fx:id="tThucTe" layoutX="458.0" layoutY="259.0" prefHeight="25.0" prefWidth="67.0" />
+            <Label layoutX="534.0" layoutY="290.0" prefHeight="25.0" prefWidth="60.0" text="Tỷ trọng :">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField id="soLuongTf" fx:id="tyTrong" layoutX="598.0" layoutY="290.0" prefHeight="25.0" prefWidth="67.0" />
+            <Label layoutX="357.0" layoutY="290.0" prefHeight="25.0" prefWidth="67.0" text="Hệ số VCF:">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField id="soLuongTf" fx:id="vcf" layoutX="458.0" layoutY="290.0" prefHeight="25.0" prefWidth="67.0" />
+            <Label layoutX="16.0" layoutY="271.0" prefHeight="25.0" prefWidth="116.0" text="Số xe:">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField id="recvTf" fx:id="soXe" layoutX="136.0" layoutY="272.0" prefHeight="25.0" prefWidth="91.0" />
+         </children>
+      </AnchorPane>
+      <TableView id="billViewTb" fx:id="tableView" layoutX="9.0" layoutY="418.0" prefHeight="146.0" prefWidth="693.0">
+        <columns>
+          <TableColumn fx:id="tbTT" prefWidth="31.0" text="TT" />
+          <TableColumn fx:id="tbTenXD" prefWidth="127.0" text="Tên Xăng dầu" />
+            <TableColumn fx:id="tbDonGia" minWidth="0.0" prefWidth="110.0" text="Đơn giá" />
+            <TableColumn fx:id="tbTong" prefWidth="369.0" text="Số lượng">
+               <columns>
+                  <TableColumn fx:id="tbPx" prefWidth="113.0" text="Phái xuất" />
+                  <TableColumn fx:id="tbNhietDo" prefWidth="113.0" text="Nhiệt độ" />
+                  <TableColumn fx:id="tbTyTrong" prefWidth="113.0" text="Tỷ trọng" />
+                  <TableColumn fx:id="tbVCf" prefWidth="113.0" text="VCF" />
+                  <TableColumn fx:id="tbTx" prefWidth="113.0" text="Thực xuất" />
+               </columns></TableColumn>
+            <TableColumn fx:id="tbThanhTien" prefWidth="102.0" text="Tổng" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Button id="importbtn" fx:id="importbtn" layoutX="269.0" layoutY="572.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="75.0" style="-fx-background-color: #0ba103;" text="NHẬP" textFill="#fffbfb">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button id="cancelbtn" fx:id="cancelbtn" cancelButton="true" layoutX="368.0" layoutY="572.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="75.0" style="-fx-background-color: #595959;" stylesheets="@css/nhapform.css" text="HỦY" textFill="WHITE" />
+      <AnchorPane layoutY="2.0" style="-fx-background-color: #0231d9;">
+         <children>
+            <Label alignment="CENTER" prefHeight="32.0" prefWidth="702.0" text="FORM NHẬP" textFill="#e4e4e4">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
