@@ -1,5 +1,6 @@
 package com.agasa.xd_f371_v0_0_1.controller;
 
+import com.agasa.xd_f371_v0_0_1.dto.ImportDto;
 import com.agasa.xd_f371_v0_0_1.dto.Nhap;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -19,7 +20,8 @@ import java.util.*;
 
 public class CreateFormController implements Initializable {
     @FXML
-    private TextField dvnTf, dvvcTf, soTf, recvTf, donGiaTf, soLuongTf, tenXDTf;
+    private TextField dvnTf, dvvcTf, soTf, recvTf,tcNhap,lenhKHso,soXe,
+            donGiaTf, phaiXuatTf, tenXDTf,thucXuatTf,tThucTe, vcf,tyTrong;
     @FXML
     private Label dateIf;
     @FXML
@@ -28,45 +30,56 @@ public class CreateFormController implements Initializable {
     @FXML
     private TableColumn<Integer, Integer> tbTT;
     @FXML
-    private TableColumn<Nhap, String> tbTenXD;
+    private TableColumn<ImportDto, String> tbTenXD,tbDonGia, tbPx,tbNhietDo, tbTyTrong, tbVCf, tbTx, tbThanhTien;
     @FXML
-    private TableColumn<Nhap, String> tbDonGia;
-    @FXML
-    private TableColumn<Nhap, String> tbSoLuong;
-    @FXML
-    private TableColumn<Nhap, String> tbTong;
-    @FXML
-    private TableColumn<String, String> tbct;
-    @FXML
-    private TableView<Nhap> tableView;
+    private TableView<ImportDto> tableView;
 
 
     private AutoCompletionBinding<String> autoCompletionBinding;
     private String[] _possibleSuggestion = {"factory", "abstract", "singleton", "duplicate", "xiaomi","single", "sign-in","simba"};
     private Set<String> possibleSuggestions = new HashSet<>(Arrays.asList(_possibleSuggestion));
 
-    ObservableList<Nhap> initialData(){
-        Nhap nhap = new Nhap("dv1", "dv2","dv1", "dv2","dv1", "dv2","123","465");
-        Nhap nhap1 = new Nhap("dv1", "dv2","dv1", "dv2","dv1", "dv2","234","345");
-        Nhap nhap2 = new Nhap("dv1", "dv2","dv1", "dv2","dv1", "dv2","345","465");
-        return FXCollections.observableArrayList(nhap, nhap1, nhap2);
+    ObservableList<ImportDto> initialData(){
+        return FXCollections.observableArrayList();
     }
 
     @FXML
     private void btnInsert(ActionEvent event){
-        Nhap nhap = new Nhap();
-        nhap.setTenXD(tenXDTf.getText());
-        nhap.setDonGia(donGiaTf.getText());
-        tableView.getItems().add(nhap);
-        tenXDTf.clear();
-        donGiaTf.clear();
+        ImportDto importDto = new ImportDto();
+        importDto.setDvn(dvnTf.getText());
+        importDto.setDvvc(dvvcTf.getText());
+        importDto.setSo(soTf.getText());
+        importDto.setNguoiNhanHang(recvTf.getText());
+        importDto.setTcNhap(tcNhap.getText());
+        importDto.setLenhKHso(lenhKHso.getText());
+        importDto.setSoXe(soXe.getText());
+        importDto.setDonGia(Double.parseDouble(donGiaTf.getText()));
+        importDto.setPx(Integer.parseInt(phaiXuatTf.getText()));
+        importDto.setTenXD(tenXDTf.getText());
+        importDto.setTenXD(tenXDTf.getText());
+        importDto.setTx(Integer.parseInt(thucXuatTf.getText()));
+        importDto.setNhietDoTT(Integer.parseInt(tThucTe.getText()));
+        importDto.setVcf(Integer.parseInt(vcf.getText()));
+        importDto.setTyTrong(Integer.parseInt(tyTrong.getText()));
+        importDto.setThanhTien(Double.parseDouble(thucXuatTf.getText())* Double.parseDouble(donGiaTf.getText()));
+        tableView.getItems().add(importDto);
+        addNewImport(importDto);
+        clearHH();
+    }
+
+    private void addNewImport(ImportDto importDto){
+        tbTenXD.setCellValueFactory(new PropertyValueFactory<ImportDto, String>("tenXD"));
+        tbDonGia.setCellValueFactory(new PropertyValueFactory<ImportDto, String>("donGia"));
+        tbPx.setCellValueFactory(new PropertyValueFactory<ImportDto, String>("px"));
+        tbTx.setCellValueFactory(new PropertyValueFactory<ImportDto, String>("tx"));
+        tbNhietDo.setCellValueFactory(new PropertyValueFactory<ImportDto, String>("nhietDoTT"));
+        tbVCf.setCellValueFactory(new PropertyValueFactory<ImportDto, String>("vcf"));
+        tbTyTrong.setCellValueFactory(new PropertyValueFactory<ImportDto, String>("tyTrong"));
+        tbThanhTien.setCellValueFactory(new PropertyValueFactory<ImportDto, String>("thanhTien"));
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-//        tbTT.setCellValueFactory(new PropertyValueFactory<String, String>("tbTT"));
-        tbTenXD.setCellValueFactory(new PropertyValueFactory<Nhap, String>("tenXD"));
-        tbDonGia.setCellValueFactory(new PropertyValueFactory<Nhap, String>("donGia"));
         tableView.setItems(initialData());
         TextFields.bindAutoCompletion(tenXDTf, _possibleSuggestion);
         System.out.println(tenXDTf.getText().trim());
@@ -91,6 +104,16 @@ public class CreateFormController implements Initializable {
             autoCompletionBinding.dispose();
         }
         autoCompletionBinding = TextFields.bindAutoCompletion(tenXDTf, possibleSuggestions);
+    }
+
+    private void clearHH(){
+        tenXDTf.clear();
+        donGiaTf.clear();
+        phaiXuatTf.clear();
+        thucXuatTf.clear();
+        tThucTe.clear();
+        vcf.clear();
+        tyTrong.clear();
     }
 
 }

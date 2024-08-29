@@ -32,12 +32,12 @@
                </font>
             </Label>
             <TextField id="dvvcTf" fx:id="dvvcTf" layoutX="136.0" layoutY="61.0" prefHeight="25.0" prefWidth="207.0" />
-            <Label layoutX="357.0" layoutY="66.0" prefHeight="25.0" prefWidth="110.0" text="Ngày :">
+            <Label layoutX="367.0" layoutY="65.0" prefHeight="25.0" prefWidth="46.0" text="Ngày :">
                <font>
                   <Font name="Arial Bold" size="12.0" />
                </font>
             </Label>
-            <Label id="dateIf" fx:id="dateIf" layoutX="483.0" layoutY="66.0" prefHeight="25.0" prefWidth="75.0" text="12/8/2024">
+            <Label id="dateIf" fx:id="dateIf" layoutX="412.0" layoutY="65.0" prefHeight="25.0" prefWidth="75.0" text="12/8/2024">
                <font>
                   <Font name="Arial" size="12.0" />
                </font>
@@ -48,33 +48,33 @@
                </font>
             </Label>
             <TextField id="recvTf" fx:id="recvTf" layoutX="136.0" layoutY="166.0" prefHeight="25.0" prefWidth="207.0" />
-            <Label layoutX="356.0" layoutY="124.0" prefHeight="25.0" prefWidth="91.0" text="Tên xăng dầu :">
+            <Label layoutX="367.0" layoutY="96.0" prefHeight="25.0" prefWidth="91.0" text="Tên xăng dầu :">
                <font>
                   <Font name="Arial Bold" size="12.0" />
                </font>
             </Label>
-            <Label layoutX="356.0" layoutY="155.0" prefHeight="25.0" prefWidth="91.0" text="Đơn giá :">
+            <Label layoutX="367.0" layoutY="127.0" prefHeight="25.0" prefWidth="91.0" text="Đơn giá :">
                <font>
                   <Font name="Arial Bold" size="12.0" />
                </font>
             </Label>
-            <TextField id="donGiaTf" fx:id="donGiaTf" layoutX="457.0" layoutY="156.0" prefHeight="25.0" prefWidth="116.0" />
-            <Label layoutX="356.0" layoutY="192.0" prefHeight="25.0" prefWidth="91.0" text="Phái xuất :">
+            <TextField id="donGiaTf" fx:id="donGiaTf" layoutX="468.0" layoutY="128.0" prefHeight="25.0" prefWidth="116.0" />
+            <Label layoutX="367.0" layoutY="164.0" prefHeight="25.0" prefWidth="91.0" text="Phái xuất :">
                <font>
                   <Font name="Arial Bold" size="12.0" />
                </font>
             </Label>
-            <TextField id="soLuongTf" fx:id="phaiXuatTf" layoutX="457.0" layoutY="192.0" prefHeight="25.0" prefWidth="67.0" />
+            <TextField id="soLuongTf" fx:id="phaiXuatTf" layoutX="468.0" layoutY="164.0" prefHeight="25.0" prefWidth="67.0" />
             <Separator prefWidth="200.0" />
             <Separator prefWidth="200.0" />
             <Label layoutX="16.0" layoutY="25.0" prefHeight="25.0" prefWidth="200.0" text="Vận chuyển" />
             <Label layoutX="356.0" layoutY="25.0" prefHeight="25.0" prefWidth="200.0" text="Thông tin đơn hàng" />
-            <Label layoutX="607.0" layoutY="150.0" prefHeight="25.0" prefWidth="60.0" text="(VND / lit)">
+            <Label layoutX="618.0" layoutY="122.0" prefHeight="25.0" prefWidth="60.0" text="(VND / lit)">
                <font>
                   <Font name="Arial" size="12.0" />
                </font>
             </Label>
-            <Label layoutX="528.0" layoutY="192.0" prefHeight="25.0" prefWidth="60.0" text="lit t độ C">
+            <Label layoutX="539.0" layoutY="164.0" prefHeight="25.0" prefWidth="60.0" text="lit t độ C">
                <font>
                   <Font name="Arial" size="12.0" />
                </font>
@@ -83,19 +83,19 @@
             <Separator layoutX="356.0" layoutY="51.0" prefWidth="200.0" />
             <Button id="delbtn" fx:id="delbtn" layoutX="631.0" layoutY="339.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="46.0" text="Xóa" />
             <Button id="addbtn" fx:id="addbtn" layoutX="573.0" layoutY="339.0" mnemonicParsing="false" onAction="#btnInsert" text="Thêm" />
-            <TextField id="tenXDTf" fx:id="tenXDTf" layoutX="456.0" layoutY="124.0" prefHeight="25.0" prefWidth="200.0" />
+            <TextField id="tenXDTf" fx:id="tenXDTf" layoutX="467.0" layoutY="96.0" prefHeight="25.0" prefWidth="200.0" />
             <Label layoutX="16.0" layoutY="199.0" prefHeight="25.0" prefWidth="116.0" text="Tính chất nhập:">
                <font>
                   <Font name="Arial Bold" size="12.0" />
                </font>
             </Label>
             <TextField id="recvTf" fx:id="tcNhap" layoutX="136.0" layoutY="200.0" prefHeight="25.0" prefWidth="207.0" />
-            <Label layoutX="357.0" layoutY="90.0" prefHeight="25.0" prefWidth="110.0" text="Giá trị đến ngày :">
+            <Label layoutX="501.0" layoutY="65.0" prefHeight="25.0" prefWidth="75.0" text="Đến ngày :">
                <font>
                   <Font name="Arial Bold" size="12.0" />
                </font>
             </Label>
-            <Label id="dateIf" fx:id="expiredDate" layoutX="481.0" layoutY="90.0" prefHeight="25.0" prefWidth="75.0" text="12/8/2024">
+            <Label id="dateIf" fx:id="expiredDate" layoutX="580.0" layoutY="65.0" prefHeight="25.0" prefWidth="75.0" text="12/8/2024">
                <font>
                   <Font name="Arial" size="12.0" />
                </font>
@@ -106,35 +106,35 @@
                </font>
             </Label>
             <TextField id="recvTf" fx:id="lenhKHso" layoutX="136.0" layoutY="235.0" prefHeight="25.0" prefWidth="207.0" />
-            <Label layoutX="357.0" layoutY="223.0" prefHeight="25.0" prefWidth="91.0" text="Thực xuất :">
+            <Label layoutX="368.0" layoutY="195.0" prefHeight="25.0" prefWidth="91.0" text="Thực xuất :">
                <font>
                   <Font name="Arial Bold" size="12.0" />
                </font>
             </Label>
-            <TextField id="soLuongTf" fx:id="thucXuatTf" layoutX="458.0" layoutY="223.0" prefHeight="25.0" prefWidth="67.0" />
-            <Label layoutX="529.0" layoutY="223.0" prefHeight="25.0" prefWidth="60.0" text="lit 15 độ C">
+            <TextField id="soLuongTf" fx:id="thucXuatTf" layoutX="469.0" layoutY="195.0" prefHeight="25.0" prefWidth="67.0" />
+            <Label layoutX="540.0" layoutY="195.0" prefHeight="25.0" prefWidth="60.0" text="lit 15 độ C">
                <font>
                   <Font name="Arial" size="12.0" />
                </font>
             </Label>
-            <Label layoutX="357.0" layoutY="259.0" prefHeight="25.0" prefWidth="104.0" text="Nhiệt độ thực tế:">
+            <Label layoutX="368.0" layoutY="231.0" prefHeight="25.0" prefWidth="104.0" text="Nhiệt độ thực tế:">
                <font>
                   <Font name="Arial Bold" size="12.0" />
                </font>
             </Label>
-            <TextField id="soLuongTf" fx:id="tThucTe" layoutX="458.0" layoutY="259.0" prefHeight="25.0" prefWidth="67.0" />
-            <Label layoutX="534.0" layoutY="290.0" prefHeight="25.0" prefWidth="60.0" text="Tỷ trọng :">
+            <TextField id="soLuongTf" fx:id="tThucTe" layoutX="469.0" layoutY="231.0" prefHeight="25.0" prefWidth="67.0" />
+            <Label layoutX="546.0" layoutY="262.0" prefHeight="25.0" prefWidth="60.0" text="Tỷ trọng :">
                <font>
                   <Font name="Arial Bold" size="12.0" />
                </font>
             </Label>
-            <TextField id="soLuongTf" fx:id="tyTrong" layoutX="598.0" layoutY="290.0" prefHeight="25.0" prefWidth="67.0" />
-            <Label layoutX="357.0" layoutY="290.0" prefHeight="25.0" prefWidth="67.0" text="Hệ số VCF:">
+            <TextField id="soLuongTf" fx:id="tyTrong" layoutX="609.0" layoutY="262.0" prefHeight="25.0" prefWidth="67.0" />
+            <Label layoutX="368.0" layoutY="262.0" prefHeight="25.0" prefWidth="67.0" text="Hệ số VCF:">
                <font>
                   <Font name="Arial Bold" size="12.0" />
                </font>
             </Label>
-            <TextField id="soLuongTf" fx:id="vcf" layoutX="458.0" layoutY="290.0" prefHeight="25.0" prefWidth="67.0" />
+            <TextField id="soLuongTf" fx:id="vcf" layoutX="469.0" layoutY="262.0" prefHeight="25.0" prefWidth="67.0" />
             <Label layoutX="16.0" layoutY="271.0" prefHeight="25.0" prefWidth="116.0" text="Số xe:">
                <font>
                   <Font name="Arial Bold" size="12.0" />

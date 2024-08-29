@@ -8,6 +8,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class QDatabase {
+
+    public static Connection conn;
+
+    public static void getConnectionDB(){
+        try {
+            if (conn == null){
+                conn = DriverManager.getConnection("jdbc:postgresql://127.0.0.1:5432/xd_f371", "postgres", "");
+            }
+        } catch (SQLException e) {
+            System.err.format("SQL State: %s\n%s", e.getSQLState(), e.getMessage());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     public void test(){
         List<LoaiXangDau> result = new ArrayList<>();
 
@@ -15,10 +30,9 @@ public class QDatabase {
         String SQL_SELECT = "Select * from test";
 
         // auto close connection and preparedStatement
-        try (Connection conn = DriverManager.getConnection(
-                "jdbc:postgresql://127.0.0.1:5432/xd_f371", "postgres", "");
-             PreparedStatement preparedStatement = conn.prepareStatement(SQL_SELECT)) {
-
+        try {
+            getConnectionDB();
+            PreparedStatement preparedStatement = conn.prepareStatement(SQL_SELECT);
             ResultSet resultSet = preparedStatement.executeQuery();
 
             while (resultSet.next()) {
